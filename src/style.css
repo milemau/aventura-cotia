@@ -1,0 +1,91 @@
+:root{font-family:'Segoe UI',Arial,sans-serif;color:#233f35;background:#f3f1e7;font-synthesis:none;font-weight:400}*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:disabled{cursor:wait}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #d89832;outline-offset:4px}button{border:0}button:hover{filter:brightness(1.06)}[hidden]{display:none!important}.icon{width:22px;height:22px;flex-shrink:0}.site-header{height:106px;max-width:1392px;margin:auto;padding:0 52px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:#254536;font-size:16px;font-weight:750;line-height:1.1;letter-spacing:-.5px}.brand img{width:40px;height:40px;border-radius:13px}.brand-bottom{display:block}.header-note{font-size:10px;letter-spacing:2.4px;color:#758174}.text-button{background:none;color:#3f5a4c;display:flex;align-items:center;gap:9px;font-size:12px;font-weight:600;padding:10px 0}.text-button .icon{width:18px}.layout{max-width:1250px;margin:16px auto 0;display:grid;grid-template-columns:minmax(250px,1fr) minmax(340px,440px) minmax(210px,.8fr);gap:54px;align-items:center;padding:0 26px}.introduction{padding-bottom:10px}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:700;display:flex;align-items:center;gap:9px}.dot,.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#a3b471}h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(46px,4.5vw,66px);font-weight:500;line-height:1.06;letter-spacing:-2.7px;margin:28px 0 20px}h1>span{color:#a86c34}.title-dot{color:#d5a64c}.intro-copy{font-size:19px;line-height:1.5;letter-spacing:-.5px;margin-bottom:16px}.intro-description{font-size:13px;line-height:1.9;color:#738074;max-width:245px}.forest-note{display:flex;gap:12px;align-items:center;margin:36px 0;color:#718460}.forest-note>.icon{width:35px;height:35px;stroke-width:1.1;transform:rotate(-15deg)}.forest-note p{font-family:Georgia,serif;font-style:italic;font-size:14px;line-height:1.5}.edition{border-top:1px solid #d9ddce;padding-top:20px;font-size:9px;letter-spacing:1.7px;color:#7a8575;display:flex;align-items:center;gap:13px;max-width:242px}.edition>span{font-family:Georgia,serif;font-size:22px;color:#a6af99}.game-shell{height:min(720px,calc(100svh - 162px));min-height:530px;position:relative;border-radius:25px;overflow:hidden;box-shadow:0 25px 65px #344d3620,0 0 0 7px #fff8;background:#afcdb5;isolation:isolate}canvas{display:block;width:100%;height:100%;touch-action:none;outline:0}.game-top{position:absolute;top:22px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;gap:4px}.location{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;background:#f6f5e9ce;border-radius:30px;padding:8px 12px;backdrop-filter:blur(8px);color:#365540}.location .icon{width:15px;height:15px}.game-actions{display:flex;gap:7px}.round-button{border-radius:50%;width:34px;height:34px;background:#f6f5e9dd;color:#39523f;display:grid;place-items:center}.round-button .icon{width:17px;height:17px}.hud{position:absolute;top:78px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;color:#233f35;text-shadow:0 1px 8px #fff8}.hud>div>span{font-size:9px;letter-spacing:2px;display:block}.hud strong{font-size:30px;font-weight:750;font-variant-numeric:tabular-nums}.coin-counter{display:flex;align-items:center;gap:7px}.coin-counter .icon{color:#a16a17;fill:#f7d578}.coin-counter strong{font-size:24px}.overlay{position:absolute;bottom:41px;left:16px;right:16px;text-align:center;background:linear-gradient(180deg,#f8f6e900,#f8f6e9eb 18%,#f8f6e9fa);padding:48px 22px 24px;border-radius:0 0 16px 16px}.small-label{font-size:8px;font-weight:700;letter-spacing:1.7px;color:#65795b}.overlay h2{font-family:Georgia,serif;font-size:33px;line-height:1.1;font-weight:500;letter-spacing:-.9px;margin:12px 0}.overlay p{font-size:12px;line-height:1.7;color:#687564;margin:12px 0 22px}.primary-button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border-radius:11px;background:#214f3f;color:#fff9df;padding:18px 21px;font-size:13px;font-weight:600;box-shadow:0 5px 0 #183f33;transition:transform .15s}.primary-button:hover{transform:translateY(-2px)}.primary-button:active{transform:translateY(2px)}.primary-button .icon{width:18px;height:18px}.start-hint{display:block;font-size:9px;color:#7a8571;margin-top:17px}.game-bottom{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:8px;color:#4f6949;display:flex;align-items:center;justify-content:center;gap:7px}.game-bottom .live-dot{width:4px;height:4px;background:#6d8a59}.guide{align-self:center}.record-card{border:1px solid #d6dbc9;border-radius:14px;padding:23px;text-align:center;max-width:218px;background:#eceee0}.record-card>.icon{display:block;margin:0 auto 12px;color:#8c9c6d;width:26px;height:26px}.record-card>span{display:block;font-size:9px;letter-spacing:2px;color:#70805f}.record-card>strong{display:block;font-family:Georgia,serif;font-size:38px;font-weight:400;margin:6px 0;line-height:1.2}.record-card>small{font-size:10px;color:#89917f}.how-to{margin-top:33px}.how-to>.eyebrow{font-size:8px;letter-spacing:1.6px;color:#8b947e}.how-to h2{font-family:Georgia,serif;font-size:25px;font-weight:400;line-height:1.2;letter-spacing:-.6px;margin:11px 0 25px}.instruction{display:flex;gap:12px;margin-top:23px;align-items:flex-start}.instruction-symbol{width:31px;height:31px;display:grid;place-items:center;border:1px solid #d8dccd;border-radius:8px;font-size:21px;color:#718468;flex-shrink:0}.instruction strong{font-size:11px;font-weight:600}.instruction p{font-size:11px;line-height:1.7;color:#818a78;margin:5px 0 0}.gold-symbol{color:#b8943c;border:0;background:#eae6ce}.gold-symbol .icon{width:19px}.tip{display:flex;align-items:flex-start;gap:10px;border-top:1px solid #d9ddce;margin-top:29px;padding-top:18px;max-width:220px}.tip>.icon{width:16px;height:16px;margin-top:3px;color:#83956a}.tip p{font-size:10px;color:#8a917e;line-height:1.8;margin:0}.tip strong{font-weight:600;color:#718064}footer{max-width:1288px;margin:30px auto 0;padding:0 40px 25px;display:flex;align-items:center;justify-content:space-between;color:#8b9380;font-size:10px}footer>span:last-of-type{font-size:8px;letter-spacing:1.7px}.footer-star{color:#a4af83;font-size:16px;vertical-align:middle;margin:0 5px}.touch-controls{position:absolute;bottom:48px;left:22px;right:22px;display:flex;gap:12px;justify-content:space-between}.touch-controls button{background:#f8f7e8c9;backdrop-filter:blur(6px);border:1px solid #ffffff6e;border-radius:14px;color:#284d3a;height:49px;min-width:56px;display:flex;align-items:center;justify-content:center;gap:6px;touch-action:manipulation}.touch-controls #jump{padding:0 24px;font-size:10px;font-weight:750;letter-spacing:1px}.flip{transform:rotate(180deg)}.result-stats{display:flex;justify-content:center;gap:27px;margin:23px 0 27px}.result-stats strong{display:block;font-family:Georgia,serif;font-size:28px;font-weight:400}.result-stats span{display:block;font-size:10px;color:#7e876e;margin-top:4px}.loading{position:absolute;inset:0;background:#d9e3cb;display:grid;place-items:center;text-align:center;padding:40px;font-size:14px;z-index:10}dialog{width:min(480px,calc(100vw - 30px));border:0;border-radius:22px;background:#f6f4e9;color:#284839;padding:38px;box-shadow:0 30px 100px #102e3555}dialog::backdrop{background:#173c3399;backdrop-filter:blur(5px)}dialog>.round-button{position:absolute;right:15px;top:15px;background:#e8ebda}dialog h2{font-family:Georgia,serif;font-size:36px;font-weight:400;line-height:1.1;letter-spacing:-1px;margin:20px 0}dialog>p{font-size:13px;line-height:1.8;color:#6f7d69}dialog ol{padding-left:20px}dialog li{font-size:12px;padding:7px 0 7px 5px;color:#8a9d73}dialog li strong{color:#35533e;display:block;margin-bottom:3px}dialog li span{color:#7a846f;font-size:11px}.code-example{padding:18px;background:#e8ecdc;border-radius:12px}.code-example code{font-size:13px;line-height:1.6}.code-example>span{display:block;font-size:10px;color:#839075;margin-top:10px}dialog .dialog-end{font-family:Georgia,serif;font-style:italic;font-size:16px;margin-bottom:0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* The game fills the viewport at every screen size. */
+html, body, #app { width: 100%; height: 100%; overflow: hidden; }
+.sr-only { top: 0; left: 0; }
+body { background: #afcdb5; }
+.site-header {
+  position: absolute;
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: 0;
+  height: 64px;
+  max-width: none;
+  padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+  z-index: 2;
+  background: linear-gradient(#e1eadbee, #e1eadb00);
+  pointer-events: none;
+}
+.site-header a, .site-header button { pointer-events: auto; }
+.brand { font-size: 12px; }
+.brand img { width: 31px; height: 31px; border-radius: 10px; }
+.header-note, .introduction, .guide, footer > span { display: none; }
+.text-button { font-size: 10px; }
+.text-button .icon { width: 16px; }
+.layout { display: block; max-width: none; padding: 0; margin: 0; }
+.game-shell {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+}
+.game-top {
+  top: calc(76px + env(safe-area-inset-top));
+  left: max(20px, env(safe-area-inset-left));
+  right: max(20px, env(safe-area-inset-right));
+}
+.hud {
+  top: calc(128px + env(safe-area-inset-top));
+  left: max(24px, env(safe-area-inset-left));
+  right: max(24px, env(safe-area-inset-right));
+}
+.overlay {
+  bottom: calc(32px + env(safe-area-inset-bottom));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(440px, calc(100% - 44px));
+  max-height: calc(100% - 190px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  overflow-y: auto;
+  padding-top: 45px;
+  border-radius: 0 0 18px 18px;
+}
+.overlay h2 { font-size: 36px; }
+.overlay p { font-size: 13px; }
+.small-label, .start-hint { font-size: 9px; }
+.primary-button { padding: 19px 22px; font-size: 14px; }
+.game-bottom { bottom: calc(13px + env(safe-area-inset-bottom)); font-size: 8px; }
+.touch-controls {
+  bottom: calc(47px + env(safe-area-inset-bottom));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(440px, calc(100% - 44px));
+}
+.touch-controls button { height: 54px; min-width: 66px; }
+.result-stats { gap: 35px; }
+footer {
+  position: absolute;
+  top: calc(34px + env(safe-area-inset-top));
+  right: max(20px, env(safe-area-inset-right));
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+dialog { padding: 30px; }
+@media (max-height: 500px) {
+  .game-top { top: calc(64px + env(safe-area-inset-top)); }
+  .hud { top: calc(108px + env(safe-area-inset-top)); }
+  .overlay {
+    max-height: calc(100% - 110px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding: 14px 22px;
+    background: #f8f6e9eb;
+  }
+  .overlay h2 { font-size: 26px; margin: 6px 0; }
+  .overlay p { margin: 6px 0 10px; }
+  .start-hint { margin-top: 10px; }
+  .result-stats { margin: 10px 0; }
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}

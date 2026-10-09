@@ -1,0 +1,23 @@
+{
+  "name": "aventura-da-cotia",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:browser": "node scripts/smoke-test.mjs",
+    "test:teaching": "node scripts/teaching-test.mjs",
+    "icons": "node scripts/render-icons.mjs"
+  },
+  "dependencies": { "@babylonjs/core": "^8.0.0" },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9",
+    "vite-plugin-pwa": "^1.0.3",
+    "vitest": "^3.2.4"
+  }
+}
