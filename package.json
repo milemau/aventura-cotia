@@ -9,6 +9,7 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",
     "test:browser": "node scripts/smoke-test.mjs",
+    "test:music": "node scripts/music-test.mjs",
     "test:teaching": "node scripts/teaching-test.mjs",
     "icons": "node scripts/render-icons.mjs"
   },

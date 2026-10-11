@@ -39,7 +39,7 @@ Capturas dos testes ficam em `test-results/`. Ícones PNG são gerados a partir 
 - Velocidade de 9 até 22 unidades/segundo, com progressão gradual.
 - Game over, reinício e recorde no armazenamento local.
 - Pausa com P/Esc ou botão; pausa automática ao sair da janela/aba.
-- Efeitos sonoros sintetizados e opção de silenciar persistente.
+- Trilha original “Trilha da Floresta” e efeitos sonoros sintetizados, com opção de silenciar persistente.
 - Explicação “Como isso é feito?” para a apresentação.
 
 ## Escolha da stack
@@ -61,6 +61,7 @@ src/game.test.ts   Testes de colisão, pontuação, progressão e geração
 src/world.ts       Cena e pools de meshes
 src/cotia.ts       Cotia bípede procedural, mochila e animações articuladas
 src/main.ts        Interface, entradas, áudio, pausa e recorde
+src/music.ts       Trilha da Floresta: composição e reprodução procedural
 src/teaching.ts    Explicação em seis passos, código comentado e experiências
 src/teaching.css   Layout responsivo da explicação para a escola
 src/style.css      Layout desktop e celular
@@ -70,6 +71,14 @@ vite.config.ts    Build e PWA
 As regras avançam em pequenos passos para preservar colisões em quadros lentos. A geração bloqueia apenas uma faixa por fileira, coloca moedas em outra e mantém ao menos 1,55 s entre fileiras. O pulo é balístico e não permite pulo duplo. O limite de `dt` evita saltos grandes de simulação após travamentos; em dispositivos lentos, o jogo pode ficar mais lento em vez de atravessar obstáculos.
 
 Para ajustar o rosto, edite `COTIA_FACE` no início de `src/cotia.ts`: `eyeScale` controla o tamanho dos olhos, `eyeDepth` a saliência, `eyeSpacing` a distância ao centro, `mouthWidth` a largura da boca fechada, `smileCurve` a elevação dos cantos e `mouthLineRadius` a espessura da linha. Os blocos `OLHOS` e `BOCA FECHADA` contêm a geometria. Em desenvolvimento, Vite atualiza a página ao salvar; para atualizar a versão de produção da porta 4173, execute `npm run build` e recarregue a página.
+
+## Música: Trilha da Floresta
+
+Composição instrumental original de aventura em Ré maior, a 100 BPM. O loop de 32 compassos dura 76,8 segundos, com tema de flauta sintetizada, arpejos suaves, baixo e percussão discreta. Uma segunda frase e uma retomada com notas agudas variam o arranjo.
+
+A partitura e os instrumentos ficam em `src/music.ts`; Web Audio gera o som durante a partida, sem baixar MP3, bibliotecas extras ou amostras externas. Apenas um pequeno buffer de percussão de 60 ms é criado ao ativar o áudio. A trilha começa após a interação do jogador, pausa com o jogo ou ao silenciar, continua ao retomar e reinicia em uma nova corrida. O cache da aplicação também inclui a música para uso offline.
+
+Com o servidor aberto, `npm run test:music` verifica a saída de áudio, silêncio na pausa e no mute, reinício, limite de vozes simultâneas e renderização do loop completo sem clipping. Use `TEST_URL` para testar outra porta.
 
 ## Próxima etapa: Blender/GLB
 

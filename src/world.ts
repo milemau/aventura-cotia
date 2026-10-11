@@ -32,15 +32,18 @@ export function createWorld(canvas: HTMLCanvasElement, game: Runner) {
     const m = new StandardMaterial(name, scene); m.diffuseColor = Color3.FromHexString(hex);
     m.specularColor = Color3.Black(); return m;
   };
-  const grass = material('grass', '#72975b');
+  
   const path = material('warm earth', '#dbbe8d');
   const edge = material('path edges', '#a6b574');
   const dash = material('lane markers', '#eee0b6');
   const bark = material('bark', '#80563b');
   const cut = material('cut wood', '#e7ba79');
   const ring = material('wood rings', '#ac7747');
+  //alterar aqui para mudar cor das árvores
+  //const grass = material('grass', '#be2297');
+  const grass = material('grass', '#72975b');
   const foliage = ['#426d48', '#628c4a', '#7d9d53', '#315d43'].map((c, i) => material(`leaves${i}`, c));
-  //const foliage = ['#4b426d', '#0b109d', '#0b109d', '#0b109d'].map((c, i) => material(`leaves${i}`, c));
+  //const foliage = ['#ffcbdb', '#ffcbdb', '#ffcbdb', '#ffcbdb'].map((c, i) => material(`leaves${i}`, c));
 
   const gold = material('gold', '#ffd35a'); gold.emissiveColor = new Color3(0.14, 0.07, 0);
   const goldCenter = material('gold inset', '#efad32');

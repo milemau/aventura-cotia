@@ -2,6 +2,7 @@ import './style.css';
 import { Runner } from './game';
 import { createWorld } from './world';
 import { setupTeaching, teachingMarkup } from './teaching';
+import { ForestMusic } from './music';
 
 const icons: Record<string, string> = {
   leaf: '<path d="M20 4c-9-2-16 3-15 10 1 5 9 7 12 2 2-3 2-7 3-12Z"/><path d="m4 21 10-11"/>',
@@ -67,9 +68,20 @@ app.innerHTML = `
 const get = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const game = new Runner();
 let audio: AudioContext | undefined;
+let music: ForestMusic | undefined;
+function syncMusic() {
+  music?.setPlaying(game.phase === 'running' && !muted && !document.hidden, game.phase === 'ready' || game.phase === 'over');
+}
 function activateAudio() {
   if (muted) return;
-  try { audio ??= new AudioContext(); void audio.resume().catch(() => {}); } catch { /* Sound is optional. */ }
+  try {
+    if (!audio) {
+      audio = new AudioContext();
+      audio.addEventListener('statechange', syncMusic);
+      music = new ForestMusic(audio);
+    }
+    void audio.resume().then(syncMusic).catch(() => {});
+  } catch { /* Sound is optional. */ }
 }
 function tone(frequency: number, duration: number, type: OscillatorType = 'sine') {
   if (muted || !audio || audio.state !== 'running') return;
@@ -85,9 +97,10 @@ function updateSoundButton() {
   get('sound').setAttribute('aria-pressed', String(!muted));
 }
 updateSoundButton();
-get('sound').onclick = () => { muted = !muted; save('cotia-muted', String(muted)); activateAudio(); updateSoundButton(); };
+get('sound').onclick = () => { muted = !muted; save('cotia-muted', String(muted)); activateAudio(); syncMusic(); updateSoundButton(); };
 let lastScore = -1; let lastCoins = 0;
 function syncPhase() {
+  syncMusic();
   const playing = game.phase === 'running'; const over = game.phase === 'over'; const paused = game.phase === 'paused';
   get('overlay').hidden = playing; get('welcome').hidden = game.phase !== 'ready';
   get('result').hidden = !over; get('paused').hidden = !paused;
@@ -155,7 +168,11 @@ try {
     if (game.coins !== lastCoins) { get('coins').textContent = String(game.coins); if (game.coins > lastCoins) tone(880, 0.09); lastCoins = game.coins; }
     if (phase !== game.phase) syncPhase();
   });
-  if (import.meta.hot) import.meta.hot.dispose(() => world.dispose());
+  if (import.meta.hot) import.meta.hot.dispose(() => {
+    world.dispose();
+    music?.dispose();
+    if (audio) { audio.removeEventListener('statechange', syncMusic); void audio.close(); }
+  });
 } catch (error) {
   get('loading').textContent = 'Não foi possível abrir o 3D. Tente um navegador com WebGL e aceleração gráfica ativada.';
   get<HTMLButtonElement>('start').disabled = true; console.error(error);

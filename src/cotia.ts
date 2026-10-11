@@ -45,9 +45,19 @@ export function createCotia(scene: Scene) {
   pupil.specularColor.set(0.45, 0.4, 0.32); pupil.specularPower = 64;
   const sparkle = mat('cotia • eye sparkle', '#ffffff');
   sparkle.emissiveColor.set(0.35, 0.35, 0.35);
+
+//
   const teal = mat('backpack • turquoise', '#229f9d');
   const tealDark = mat('backpack • piping', '#17736e');
-  const pink = mat('backpack • pink zip', '#ec7693');
+ const pink = mat('backpack • pink zip', '#ec7693');
+//
+
+ //alterar aqui para mudar cor da mochila
+   //const tealDark = mat('backpack • piping', '#fbfefe');
+    //const pink = mat('backpack • pink zip', '#76ec8c');
+    //const teal = mat('backpack • turquoise', '#eee7e7');
+
+
   const yellow = mat('backpack • sunny yellow', '#ffd365');
 
   const sphere = (name: string, size: Triple, at: Triple, material: StandardMaterial, parent = root) => {
